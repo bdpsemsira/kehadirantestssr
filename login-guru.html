@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Guru - SEMSIRA</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root { --bg-color: #0f172a; --panel-bg: #1e293b; --primary: #0ea5e9; --success: #22c55e; --danger: #ef4444; --warning: #f59e0b; --text-main: #f8fafc; --text-muted: #94a3b8; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, sans-serif; }
+        body { background-color: var(--bg-color); color: var(--text-main); }
+        .container { max-width: 1200px; margin: 30px auto; padding: 0 20px; }
+        .card { background: var(--panel-bg); padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.3); margin-bottom: 20px; }
+        button.btn { background: var(--primary); color: white; border: none; padding: 8px 12px; border-radius: 5px; cursor: pointer; font-weight: bold; transition: 0.3s; }
+        button.btn:hover { background: #0284c7; }
+        input { width: 100%; padding: 10px; margin: 10px 0; border-radius: 5px; border: 1px solid #334155; background: #0f172a; color: white; font-size: 1rem; }
+        .hidden { display: none !important; }
+    </style>
+</head>
+<body>
+
+    <div id="page-login-guru" class="container" style="max-width: 400px; margin-top: 10vh;">
+        <button class="btn no-print" onclick="location.href='index.html'" style="margin-bottom: 20px;">
+            <i class="fas fa-arrow-left"></i> Kembali
+        </button>
+        <div class="card">
+            <h2>Log Masuk Guru</h2>
+            <input type="email" id="login-guru-email" placeholder="E-mel Guru">
+            <input type="password" id="login-guru-pass" placeholder="Kata Laluan">
+            <button class="btn" style="width: 100%;" onclick="login('guru')">Log Masuk</button>
+            <p style="margin-top: 15px; text-align: center; font-size: 0.9rem;">
+                Belum ada akaun? <a href="#" onclick="toggleView()" style="color: var(--primary);">Daftar di sini</a>
+            </p>
+        </div>
+    </div>
+
+    <div id="page-signup-guru" class="container hidden" style="max-width: 400px; margin-top: 10vh;">
+        <button class="btn no-print" onclick="toggleView()" style="margin-bottom: 20px;">
+            <i class="fas fa-arrow-left"></i> Kembali
+        </button>
+        <div class="card">
+            <h2>Daftar Guru Baru</h2>
+            <input type="text" id="reg-name" placeholder="Nama Penuh">
+            <input type="text" id="reg-phone" placeholder="Nombor Telefon">
+            <input type="email" id="reg-email" placeholder="Alamat E-mel">
+            <input type="password" id="reg-pass" placeholder="Kata Laluan">
+            <button class="btn" style="width: 100%;" onclick="registerGuru()">Daftar</button>
+        </div>
+    </div>
+
+    <script>
+        function toggleView() {
+            document.getElementById('page-login-guru').classList.toggle('hidden');
+            document.getElementById('page-signup-guru').classList.toggle('hidden');
+        }
+
+        function login(role) {
+            // 这里放入你原始的 login 逻辑
+            console.log("Attempting login for: " + role);
+        }
+
+        function registerGuru() {
+            // 这里放入你原始的 registerGuru 逻辑
+            console.log("Registering new teacher...");
+        }
+    </script>
+</body>
+</html>
